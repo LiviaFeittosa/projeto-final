@@ -1,0 +1,170 @@
+/*Reset inicial*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Garante que bordas e padding não aumentem o tamanho dos elementos*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    /*Permite mudar cor e outros atributos em todo o site alterando em apenas um lugar*/
+    --bg-color: #0d1117; /*Cor principal do plano de fundo*/
+    --text-color: #e6edf3; /*Cor do texto principal*/
+    --primary-color: #c025df; /*Cor de destaque dos elementos*/
+    --card-bg: #161b22;
+    --border-color: #30363d;
+}
+
+body {
+    background-color: var(--bg-color); /*usa variavél de fundo*/
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-pad {
+    padding: 80px 0;
+}
+
+.navbar{
+    background-color: #161d22d0;
+    backdrop-filter: blur(10px);
+    position: fixed; /*mantém  o menu sempre visivel no topo*/
+    width: 100%;
+    z-index: 1000; 
+}
+
+.navbar-content {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .highlight {color: var(--primary-color)}
+
+.menu a {
+    text-decoration: none;
+    font-size: 10px;
+    color: var(--text-color);
+    margin-left: 20px;
+}
+
+.btn-nav {
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    border-color: var(--primary-color);
+}
+
+/*SEÇÃO HERO*/
+
+.hero {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background: radial-gradient(circle at top, var(--primary-color) 0%, #0d1117 50%);
+}
+
+.tag {
+    background-color: #1f2428;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 20px;
+}
+
+.container .highlight-title {color: var(--primary-color)}
+
+.hero p {
+    color: #8b949e;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2 rem; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: var(--border-color);
+}
+
+/*módulos - seção o que vai aprender*/
+.row {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.icons-box {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+footer {
+   text-align: center;
+   padding: 25px;
+   color: #8b949e;
+   border-top: 1px solid var(--border-color);
+   background-color: var(--border-color);
+}
